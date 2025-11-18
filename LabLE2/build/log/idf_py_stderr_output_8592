@@ -1,0 +1,252 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace C:\Espressif\frameworks\esp-idf-v5.5.1\examples\get-started\LabLE2\build\LabLE2.elf C:\Espressif\frameworks\esp-idf-v5.5.1\examples\get-started\LabLE2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM7 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp7kydhljc"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp7kydhljc\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpwh1ptptr"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpwh1ptptr\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp203kkd34"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp203kkd34\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpq18k2kfe"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpq18k2kfe\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpr9iab32z"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpr9iab32z\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpb9c9s9h5"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpb9c9s9h5\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpfvinavve"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpfvinavve\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp26432qax"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp26432qax\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpc78nu8vu"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpc78nu8vu\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp3kpaktcz"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp3kpaktcz\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpc8ckce1i"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpc8ckce1i\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp5_2_6td3"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp5_2_6td3\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpg4ame274"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpg4ame274\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp90xf5sfl"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp90xf5sfl\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpgszujv1b"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpgszujv1b\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpw36_2spe"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmpw36_2spe\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmplv72yyo1"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmplv72yyo1\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmppjsetp9y"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmppjsetp9y\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp8ykkd7ao"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp8ykkd7ao\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\LabLE2.elf', '-ex', 'add-symbol-file C:\\Espressif\\frameworks\\esp-idf-v5.5.1\\examples\\get-started\\LabLE2\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp_0p3uy7y"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "C:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf"\r\nC:Espressifframeworksesp-idf-v5.5.1examplesget-startedLabLE2buildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adria\\AppData\\Local\\Temp\\tmp_0p3uy7y\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40383696: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x42008c8e: [0;33mloop[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/callingConvention.s[0m[0m:[1;31m61[0m
+[0m--- 0x42008c5e: [0;33mapp_main[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/examples/get-started/LabLE2/main/main.c[0m[0m:[1;31m23[0m
+[0m
