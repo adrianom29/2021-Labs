@@ -1,0 +1,10 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p flash -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace C:\Espressif\frameworks\esp-idf-v5.5.1\examples\get-started\hello_world\build\hello_world.elf C:\Espressif\frameworks\esp-idf-v5.5.1\examples\get-started\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p'
+[0;33m--- esp-idf-monitor 1.8.0 on flash 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Connection to flash failed. Available ports:
+--- COM3
+--- COM6
+--- COM4
+--- COM5
+--- COM7[0m
+[0m
